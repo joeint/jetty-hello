@@ -1,6 +1,5 @@
 # Alpine Linux with OpenJDK JRE
 FROM openjdk:8-jre-alpine
 
-# copy WAR into image
-COPY hello-jetty.jar /hello-jetty.jar 
+COPY ./target/HelloWorldJetty-0.0.1-SNAPSHOT-jar-with-dependencies.jar /hello-jetty.jar 
 CMD ["/usr/bin/java", "-jar", "/hello-jetty.jar"]
